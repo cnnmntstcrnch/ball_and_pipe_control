@@ -9,7 +9,7 @@
 close all; clc; clear device;
 
 %% Connect to device
-% device = open serial communication in the proper COM port
+device = serialport("COM1",19200); %open serial communication in the proper COM port
 
 %% Parameters
 target      = 0.5;   % Desired height of the ball [m]
