@@ -15,10 +15,10 @@ function [distance,pwm,target,deadpan] = read_data(device)
 % Modified by: YOUR NAME and DATE
 
 %% Ask nicely for data
+write(device, "h","string");
 write(device,"S","string");
 %% Read data
 data=read(device,"S","string");
-
 %% Translate
 % translate the response to 4 doubles using str2double() and
 % extractBetween() (Hint: the response is in the spec sheet)

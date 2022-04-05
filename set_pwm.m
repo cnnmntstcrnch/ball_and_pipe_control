@@ -19,7 +19,7 @@ end
 % Bound value to limits 0 to 4095
 
 %% Send Command
-action = int2str(pwm_value);% string value of pwm_value
+action = sprintf('p%04.f',pwm_value);% string value of pwm_value
 % use the serialport() command options to change the PWM value to action
-
+write(device,action,'string');
 end

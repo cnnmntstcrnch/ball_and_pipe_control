@@ -30,7 +30,7 @@ error_sum   = 0;
 while true
     %% Read current height
     [distance,pwm,target,deadpan] = read_data(device);
-    y = ir2y(ir); % Convert from IR reading to distance from bottom [m]
+    [y,~] = ir2y(distance); % Convert from IR reading to distance from bottom [m]
     
     %% Calculate errors for PID controller
     error_prev = error;             % D
