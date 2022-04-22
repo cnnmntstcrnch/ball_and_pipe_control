@@ -18,12 +18,12 @@ function [distance,pwm,target,deadpan] = read_data(device)
 write(device, "h","string");
 write(device,"S","string");
 %% Read data
-data=read(device,"S","string");
+data=read(device,20,"string");
 %% Translate
 % translate the response to 4 doubles using str2double() and
 % extractBetween() (Hint: the response is in the spec sheet)
 distance   = str2double(extractBetween(data,2,5));
-manual_pwm = str2double(extractBetween(data,7,10));
+pwm        = str2double(extractBetween(data,7,10));
 target     = str2double(extractBetween(data,12,15));
 deadpan    = str2double(extractBetween(data,17,20));
 

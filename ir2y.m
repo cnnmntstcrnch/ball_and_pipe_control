@@ -19,5 +19,5 @@ y_top     = 0.9144; % Ball at top of the pipe [m]
 ir = min(max(ir,ir_top),ir_bottom);
 %% Set
 pipe_percentage = 1-((ir-ir_top)/(ir_bottom-ir_top));
-y = y_top*pip_percentage;
+y = y_top*pipe_percentage;
 
